@@ -23,7 +23,11 @@
 
   --max-width: 1200px;
 }
-
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
 /* Apply gradient background */
 body {
   background: var(--gradient-1);
@@ -224,15 +228,15 @@ nav {
 
 .about__image {
   position: relative;
-  isolation: isolate;
-  max-width: 400px;
   width: 100%;
-  margin: auto;
+  max-width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .about__img {
   width: 100%;
-  max-width: 350px;
+  max-width: 320px;
   height: auto;
   aspect-ratio: 1/1;
   object-fit: cover;
@@ -241,9 +245,15 @@ nav {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  .header__image img,
   .about__img {
-    max-width: 400px;
+    max-width: 280px;
+  }
+
+  .about__bg-1,
+  .about__bg-2 {
+    width: 80px;
   }
 }
 
