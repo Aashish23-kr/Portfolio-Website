@@ -241,6 +241,12 @@ nav {
   margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .about__img {
+    max-width: 400px;
+  }
+}
+
 .about__bg-1,
 .about__bg-2 {
   position: absolute;
